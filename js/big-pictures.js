@@ -53,6 +53,13 @@ const onPictureClick = ({ url, description, likes, comments }) => (evt) => {
   drowComments(comments);
 };
 
-const openBigPicture = (pictureItem, pictureData) => pictureItem.addEventListener('click', onPictureClick(pictureData));
+const openBigPictureDeprecated = (pictureItem, pictureData) => pictureItem.addEventListener('click', onPictureClick(pictureData));
 
-export { openBigPicture };
+/**
+ * @param {object} picture
+ */
+const openBigPicture = (picture) => {
+  console.log(picture);
+}
+
+export { openBigPicture, openBigPictureDeprecated };
